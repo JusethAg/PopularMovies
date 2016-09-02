@@ -12,8 +12,5 @@
     <dimen name="item_movie_width">172dp</dimen>
     <dimen name="item_movie_height">210dp</dimen>
 
-    <dimen name="item_movie_image_height">160dp</dimen>
-    <dimen name="item_movie_title_height">50dp</dimen>
-    <dimen name="item_movie_title_size">14dp</dimen>
 
 </resources>

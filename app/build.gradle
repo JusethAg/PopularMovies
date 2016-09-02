@@ -5,6 +5,8 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
         applicationId "com.jusethag.popularmovies"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -16,6 +18,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'THEMOVIEDB_API_KEY', project.property('THEMOVIEDB_API_KEY'))
+        }
+
+        debug {
+            buildConfigField('String', 'THEMOVIEDB_API_KEY', project.property('THEMOVIEDB_API_KEY'))
         }
     }
 }
@@ -31,8 +38,10 @@ dependencies {
 
     // Development libraries
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
     compile "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
     compile "org.greenrobot:eventbus:$rootProject.ext.eventbusVersion"
+
 
     apt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
