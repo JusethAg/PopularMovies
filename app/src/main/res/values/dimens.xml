@@ -9,8 +9,11 @@
 
 
     <!-- Custom dimens for UI elements -->
-    <dimen name="item_movie_width">172dp</dimen>
-    <dimen name="item_movie_height">210dp</dimen>
+    <dimen name="item_movie_width">180dp</dimen>
+    <dimen name="item_movie_height">240dp</dimen>
+
+    <dimen name="item_image_movie_height">190dp</dimen>
+    <dimen name="item_title_movie_height">50dp</dimen>
 
 
 </resources>

@@ -9,6 +9,7 @@ public interface MainPresenter {
     void onCreate();
     void onDestroy();
 
+    void restartList();
     void getPopularMovies();
     void getTopRatedMovies();
     void onEventMainThread(MovieListEvent movieListEvent);

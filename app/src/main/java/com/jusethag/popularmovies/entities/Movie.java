@@ -1,15 +1,17 @@
 package com.jusethag.popularmovies.entities;
 
 import com.google.gson.annotations.SerializedName;
+import com.jusethag.popularmovies.api.MovieClient;
 
 /**
  * Created by JusethAg on 9/1/2016.
  */
 public class Movie {
+
     private String title;
     private String overview;
     @SerializedName("poster_path")
-    private String urlImage;
+    private String imageUrl;
     @SerializedName("vote_average")
     private double voteAverage;
     @SerializedName("release_date")
@@ -31,12 +33,12 @@ public class Movie {
         this.overview = overview;
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+    public void setImageUrl(String urlImage) {
+        this.imageUrl = MovieClient.BASE_IMAGE_URL + urlImage;
     }
 
     public double getVoteAverage() {

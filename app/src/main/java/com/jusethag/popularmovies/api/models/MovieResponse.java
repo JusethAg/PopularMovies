@@ -1,5 +1,6 @@
 package com.jusethag.popularmovies.api.models;
 
+import com.google.gson.annotations.SerializedName;
 import com.jusethag.popularmovies.entities.Movie;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  */
 public class MovieResponse {
     private int page;
+    @SerializedName("results")
     private List<Movie> movies;
 
     public int getPage() {

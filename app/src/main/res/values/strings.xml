@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Popular Movies</string>
+
+    <!-- Titles for activities and fragments -->
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Actions on menu -->
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Preferences strings -->
+    <string name="pref_sort_label">Sort</string>
+    <!-- Label option for most popular -->
+    <string name="pref_sort_label_most_popular">Most popular</string>
+    <!-- Label option for top rated -->
+    <string name="pref_sort_label_by_top_rated">By top rated</string>
+    <!-- Key name for sort option in SharedPreferences -->
+    <string name="pref_sort_key" translatable="false">sort</string>
+    <!-- Default value for sort most popular in SharedPreferences -->
+    <string name="pref_sort_most_popular" translatable="false">Most popular</string>
+    <!-- Default value for sort by top rated in SharedPreferences -->
+    <string name="pref_sort_by_top_rated" translatable="false">By top rated</string>
+
 </resources>

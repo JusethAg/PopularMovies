@@ -10,16 +10,15 @@ import com.squareup.picasso.Picasso;
  * Created by JusethAg on 9/1/2016.
  */
 public class PicassoImageLoader implements ImageLoader {
-    private Picasso picasso;
+    private Activity activity;
 
     public void setLoaderContext(Activity activity) {
-        picasso.with(activity);
+        this.activity = activity;
     }
 
     @Override
     public void load(ImageView imageView, String url) {
-        picasso.load(url)
-                .centerCrop()
+        Picasso.with(activity).load(url)
                 .into(imageView);
     }
 }

@@ -19,7 +19,7 @@ import dagger.Provides;
 public class LibsModule {
     private Activity activity;
 
-    public void setFragment(Activity activity) {
+    public void setActivity(Activity activity) {
         this.activity = activity;
     }
 

@@ -14,6 +14,7 @@ import retrofit2.Response;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.assertTrue;
 
@@ -35,12 +36,15 @@ public class MovieServiceTest extends BaseTest {
 
     @Test
     public void doGetPopularMovies_getMovieFromAPI() throws Exception {
-        int page = 1000;
+        int page = 1;
         Call<MovieResponse> call = movieService.getPopularMovies(
                 BuildConfig.THEMOVIEDB_API_KEY, page);
 
         Response<MovieResponse> response = call.execute();
         assertTrue(response.isSuccessful());
+
+        assertNotNull(response.body().getPage());
+        assertNotNull(response.body().getMovies());
 
         MovieResponse movieResponse = response.body();
         assertEquals(page, movieResponse.getPage());
