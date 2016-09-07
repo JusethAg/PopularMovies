@@ -1,6 +1,6 @@
 package com.jusethag.popularmovies.main.ui;
 
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jusethag.popularmovies.R;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.libs.base.ImageLoader;
 
 import java.util.List;

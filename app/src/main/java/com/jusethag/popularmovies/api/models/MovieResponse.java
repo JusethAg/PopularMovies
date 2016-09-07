@@ -1,7 +1,7 @@
 package com.jusethag.popularmovies.api.models;
 
 import com.google.gson.annotations.SerializedName;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 
 import java.util.List;
 

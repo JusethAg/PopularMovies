@@ -4,7 +4,7 @@ import com.jusethag.popularmovies.BaseTest;
 import com.jusethag.popularmovies.BuildConfig;
 import com.jusethag.popularmovies.api.MovieService;
 import com.jusethag.popularmovies.api.models.MovieResponse;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.libs.base.EventBus;
 import com.jusethag.popularmovies.main.events.MovieListEvent;
 
@@ -15,7 +15,6 @@ import org.mockito.Mock;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Random;
 
 import okhttp3.Request;
 import retrofit2.Call;

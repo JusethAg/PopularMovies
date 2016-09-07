@@ -33,6 +33,7 @@ public class SettingsActivity  extends PreferenceActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         ButterKnife.bind(this);
+
         setSupportActionBar();
         addPreferencesFromResource(R.xml.pref_general);
 
@@ -79,6 +80,9 @@ public class SettingsActivity  extends PreferenceActivity
     private void setSupportActionBar() {
         if (toolbar != null) {
             getDelegate().setSupportActionBar(toolbar);
+            if (getDelegate().getSupportActionBar() != null) {
+                getDelegate().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
         }
     }
 

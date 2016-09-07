@@ -3,7 +3,7 @@ package com.jusethag.popularmovies.main;
 import com.jusethag.popularmovies.BuildConfig;
 import com.jusethag.popularmovies.api.MovieService;
 import com.jusethag.popularmovies.api.models.MovieResponse;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.libs.base.EventBus;
 import com.jusethag.popularmovies.main.events.MovieListEvent;
 

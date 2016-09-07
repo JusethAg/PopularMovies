@@ -1,8 +1,10 @@
 package com.jusethag.popularmovies;
 
-import android.app.Activity;
 import android.app.Application;
 
+import com.jusethag.popularmovies.detail.ui.DetailActivity;
+import com.jusethag.popularmovies.detail.di.DaggerDetailComponent;
+import com.jusethag.popularmovies.detail.di.DetailComponent;
 import com.jusethag.popularmovies.libs.di.LibsModule;
 
 import com.jusethag.popularmovies.main.di.DaggerMainComponent;
@@ -38,6 +40,14 @@ public class PopularMoviesApp extends Application {
         return DaggerMainComponent.builder()
                 .libsModule(libsModule)
                 .mainModule(new MainModule(mainView, onItemClickListener, onRecyclerScrollListener))
+                .build();
+    }
+
+    public DetailComponent getDetailComponent(DetailActivity detailActivity) {
+        libsModule.setActivity(detailActivity);
+
+        return DaggerDetailComponent.builder()
+                .libsModule(libsModule)
                 .build();
     }
 }

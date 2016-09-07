@@ -1,7 +1,7 @@
 package com.jusethag.popularmovies.main;
 
 import com.jusethag.popularmovies.BaseTest;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.libs.base.EventBus;
 import com.jusethag.popularmovies.main.events.MovieListEvent;
 import com.jusethag.popularmovies.main.ui.MainView;

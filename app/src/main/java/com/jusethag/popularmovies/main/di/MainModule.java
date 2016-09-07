@@ -2,7 +2,7 @@ package com.jusethag.popularmovies.main.di;
 
 import com.jusethag.popularmovies.api.MovieClient;
 import com.jusethag.popularmovies.api.MovieService;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.libs.base.EventBus;
 import com.jusethag.popularmovies.libs.base.ImageLoader;
 import com.jusethag.popularmovies.main.MainInteractor;

@@ -21,4 +21,8 @@
     <!-- Default value for sort by top rated in SharedPreferences -->
     <string name="pref_sort_by_top_rated" translatable="false">By top rated</string>
 
+    <!-- Detail activity -->
+    <string name="dot_separator" translatable="false">•</string>
+    <string name="rating_movie" translatable="false">%s/10</string>
+
 </resources>

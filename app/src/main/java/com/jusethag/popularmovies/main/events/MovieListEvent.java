@@ -1,6 +1,6 @@
 package com.jusethag.popularmovies.main.events;
 
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.models.Movie;
 
 import java.util.List;
 

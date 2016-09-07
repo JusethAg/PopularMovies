@@ -17,7 +17,8 @@ import android.widget.ProgressBar;
 
 import com.jusethag.popularmovies.PopularMoviesApp;
 import com.jusethag.popularmovies.R;
-import com.jusethag.popularmovies.entities.Movie;
+import com.jusethag.popularmovies.detail.ui.DetailActivity;
+import com.jusethag.popularmovies.models.Movie;
 import com.jusethag.popularmovies.main.MainPresenter;
 import com.jusethag.popularmovies.main.ui.adapters.MovieAdapter;
 import com.jusethag.popularmovies.main.ui.adapters.OnItemClickListener;
@@ -138,6 +139,9 @@ public class MainActivity extends AppCompatActivity implements MainView, OnItemC
 
     @Override
     public void onItemClick(Movie movie) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(DetailActivity.EXTRA_MOVIE, movie);
+        startActivity(intent);
     }
 
     @Override
@@ -146,7 +150,6 @@ public class MainActivity extends AppCompatActivity implements MainView, OnItemC
     }
 
     private void getMoviesBySortOption() {
-
         SharedPreferences sharedPreferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
         String optionSort = sharedPreferences.getString(
